@@ -1,6 +1,8 @@
 from flask import Flask,jsonify,request
+from flask_cors import CORS, cross_origin
 import pickle
 import random
+
 
 loaded_prediction_data=None
 with open("data.pickle", "rb") as f:
@@ -16,6 +18,8 @@ def getListOfUser(user_id,top_n,n=10):
 
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/getitemforrandomuser')
 def getitemforrandomuser():
