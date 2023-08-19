@@ -21,6 +21,21 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
+@app.route('/getitemlistforeachuser')
+def getitemlistforeachuser():
+    try:
+        output_list = []
+
+        for key, value in loaded_prediction_data.items():
+            user_id = int(key)
+            item_list = [int(item[0]) for item in value]
+            output_list.append({"user_id": user_id, "item_list": item_list})
+        return jsonify(output_list),200
+    except Exception as e:
+        error_message = f"Something went Wrong on our side!!!"
+        return jsonify({"error": error_message}), 500
+        
+
 @app.route('/getitemforrandomuser')
 def getitemforrandomuser():
     
