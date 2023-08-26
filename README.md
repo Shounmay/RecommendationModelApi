@@ -47,10 +47,14 @@ Once you've followed the setup steps, the Flask app will be up and running. You 
 
 ## Snaps
 
-Assuming the app is running locally:
+### Model Snaps:
+![snap-2](https://github.com/Shounmay/RecommendationModelApi/assets/90774417/5c46515d-ea57-4449-9a26-c091afe92660)
+![snap_1](https://github.com/Shounmay/RecommendationModelApi/assets/90774417/e3586a3a-3b49-4d33-a6f8-65a7fe8eb3b3)
 
-- Visit `http://localhost:5000/` to see the welcome message.
-- To get recommendations for user with ID `123`, visit `http://localhost:5000/recommend?user_id=123`.
+### Backend API Snap:
+![snap-3](https://github.com/Shounmay/RecommendationModelApi/assets/90774417/104e0501-60fe-42b6-96e5-927583bace16)
+
+
 
 ## Contributing
 
